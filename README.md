@@ -1,10 +1,8 @@
-# Mohamed Khaled - Form Pages Landing Page
+# Form Pages Landing Page
 
-**Awesome Motive Developer Challenge Submission**
+A responsive landing page built from Figma design featuring modern CSS techniques and interactive elements.
 
-A responsive landing page built from Figma design for the Awesome Motive WordPress Developer position technical challenge.
-
-## 🎯 Challenge Requirements
+## 🎯 Features
 
 - **HTML Landing Page**: Simple, semantic HTML following Figma design
 - **Modern Techniques**: CSS Grid, Flexbox, responsive design
@@ -131,7 +129,7 @@ The landing page includes a YouTube video modal that:
 - **Mobile-first**: Responsive design approach
 - **Clean Code**: Well-organized, commented code
 
-## 🎉 Challenge Completion
+## 🎉 Implementation Highlights
 
 This landing page demonstrates:
 - ✅ Modern HTML/CSS/SASS skills
@@ -141,4 +139,4 @@ This landing page demonstrates:
 - ✅ Attention to design detail
 - ✅ Professional code organization
 
-**Developed by Mohamed Khaled** | **Challenge 2** | **Awesome Motive Technical Assessment**
+**Developed by Mohamed Khaled**
