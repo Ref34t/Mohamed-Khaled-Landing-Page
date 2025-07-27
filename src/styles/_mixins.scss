@@ -1,0 +1,93 @@
+// ===================================
+// Mixins
+// ===================================
+
+// Responsive mixins
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin mobile-up {
+  @media (min-width: #{$mobile + 1px}) {
+    @content;
+  }
+}
+
+// Layout mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Section padding mixin
+@mixin section-padding {
+  padding: $spacing-4xl 0;
+  
+  @include tablet {
+    padding: 60px 0;
+  }
+  
+  @include mobile {
+    padding: 40px 0;
+  }
+}
+
+// Card styling mixin
+@mixin card-style {
+  background-color: $white;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  padding: 30px;
+}
+
+// Typography mixins
+@mixin lato-text($weight: 400, $size: 16px, $line-height: 1.5, $color: $text-color) {
+  font-family: $font-body;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  letter-spacing: 0;
+  color: $color;
+}
+
+// Button base
+@mixin button-base {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}

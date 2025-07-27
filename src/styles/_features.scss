@@ -1,0 +1,96 @@
+// ===================================
+// Features Section
+// ===================================
+
+.features {
+  padding: $spacing-4xl 0;
+  background-color: $white;
+  
+  @include tablet {
+    padding: 60px 0;
+  }
+  
+  @include mobile {
+    padding: 40px 0;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.feature {
+  text-align: center;
+  padding: $spacing-2xl;
+  background-color: $white;
+  border-right: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  
+  // Remove right border on last column
+  &:nth-child(3n) {
+    border-right: none;
+  }
+  
+  // Remove bottom border on last row
+  &:nth-last-child(-n+3) {
+    border-bottom: none;
+  }
+  
+  @include tablet {
+    // For 2-column layout
+    &:nth-child(3n) {
+      border-right: 1px solid $border-color;
+    }
+    &:nth-child(2n) {
+      border-right: none;
+    }
+    &:nth-last-child(-n+3) {
+      border-bottom: 1px solid $border-color;
+    }
+    &:nth-last-child(-n+2) {
+      border-bottom: none;
+    }
+  }
+  
+  @include mobile {
+    // For 1-column layout
+    border-right: none;
+    &:last-child {
+      border-bottom: none;
+    }
+    &:nth-last-child(-n+2) {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+  
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: $spacing-lg;
+    
+    img, svg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  
+  &__title {
+    @include lato-text(700, 24px, 30px, $text-color);
+    margin-bottom: $spacing-md;
+  }
+  
+  &__description {
+    @include lato-text(400, 16px, 24px, $text-muted);
+  }
+}

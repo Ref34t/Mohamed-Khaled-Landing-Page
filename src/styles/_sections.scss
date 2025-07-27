@@ -1,0 +1,247 @@
+// ===================================
+// Content Sections (Testimonials, Product Info, Use Cases, Final CTA)
+// ===================================
+
+// Testimonials Section
+.testimonials {
+  @include section-padding;
+  background: linear-gradient(180deg, $background-light 0%, $white 100%);
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &__cta {
+    display: flex;
+    gap: $spacing-md;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: $spacing-2xl;
+    text-align: center;
+    
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      margin-top: $spacing-xl;
+    }
+  }
+}
+
+.testimonial {
+  @include card-style;
+  display: flex;
+  flex-direction: column;
+  min-height: $testimonial-min-height;
+  
+  &__text {
+    font-style: italic;
+    margin-bottom: $spacing-md;
+    color: $text-color;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+  
+  &__rating {
+    margin-top: auto;
+    padding-top: $spacing-sm;
+    @include flex-between;
+  }
+  
+  &__author {
+    @include lato-text(400, 14px, 1, $gray-400);
+  }
+  
+  &__stars .star {
+    color: #ffc107;
+    font-size: 1.2rem;
+    margin-right: 2px;
+    display: inline-block;
+  }
+}
+
+// Product Info Section
+.product-info {
+  @include section-padding;
+  background-color: $background-light;
+  
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-3xl;
+    align-items: start;
+    
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: $spacing-xl;
+    }
+  }
+  
+  &__title {
+    color: $text-color;
+    margin-bottom: $spacing-lg;
+  }
+  
+  &__description {
+    @include lato-text(400, 18px, 28px, $text-muted);
+  }
+  
+  &__screenshot {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba($black, 0.1);
+  }
+}
+
+// Screenshots Section
+.screenshots {
+  @include section-padding;
+  background-color: $white;
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xl;
+    
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.screenshot {
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba($black, 0.1);
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+// Use Cases Section
+.use-cases {
+  padding: $spacing-4xl 0 40px 0;
+  background-color: $white;
+  text-align: center;
+  
+  @include tablet {
+    padding: 60px 0;
+  }
+  
+  @include mobile {
+    padding: 40px 0;
+  }
+  
+  &__title {
+    @include lato-text(700, 24px, 36px, $gray-700);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto $spacing-2xl;
+    
+    @include tablet {
+      font-size: 22px;
+      line-height: 32px;
+    }
+    
+    @include mobile {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    padding: $spacing-2xl 0;
+    
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: $spacing-xl;
+      padding: $spacing-xl 0;
+    }
+  }
+}
+
+.use-case {
+  text-align: center;
+  padding: 0 $spacing-xl;
+  border-right: 1px solid $border-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  &:last-child {
+    border-right: none;
+  }
+  
+  @include tablet {
+    border-right: none;
+    padding: 0;
+  }
+  
+  &__icon {
+    @include flex-center;
+    margin: 0 auto $spacing-lg;
+    
+    svg, img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  
+  &__title {
+    @include lato-text(700, 24px, 30px, $gray-700);
+    text-align: center;
+    margin-bottom: $spacing-md;
+  }
+  
+  &__description {
+    @include lato-text(400, 16px, 24px, $text-muted);
+    text-align: center;
+  }
+}
+
+// Final CTA Section
+.final-cta {
+  padding: 40px 0 $spacing-4xl 0;
+  background-color: $white;
+  text-align: center;
+  
+  @include tablet {
+    padding: 60px 0;
+  }
+  
+  @include mobile {
+    padding: 40px 0;
+  }
+  
+  &__title {
+    @include lato-text(700, 24px, 30px, $gray-700);
+    margin-bottom: $spacing-md;
+  }
+  
+  &__subtitle {
+    @include lato-text(400, 18px, 1, $text-muted);
+  }
+  
+  &__link {
+    @include lato-text(400, 18px, 1, $blue-primary);
+    text-decoration: none;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

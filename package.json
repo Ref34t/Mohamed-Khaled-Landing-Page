@@ -1,0 +1,19 @@
+{
+  "name": "mohamed-khaled-landing-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/styles/main.scss dist/css/main.css",
+    "sass:watch": "sass --watch src/styles/main.scss dist/css/main.css",
+    "copy-assets": "cp -r src/assets dist/",
+    "build": "npm run sass && npm run copy-assets",
+    "dev": "npm run sass:watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}
